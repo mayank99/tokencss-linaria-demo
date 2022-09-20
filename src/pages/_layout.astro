@@ -1,0 +1,29 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name='color-scheme' content='dark' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>tokencss demo</title>
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+			}
+
+			body {
+				font-family: sans;
+				display: grid;
+				gap: xs;
+				justify-content: center;
+			}
+			
+			p, h1, h2, h3, h4, h5, h6 {
+				max-width: 50ch;
+				line-height: 1.5;
+			}
+		</style>
+	</body>
+</html>

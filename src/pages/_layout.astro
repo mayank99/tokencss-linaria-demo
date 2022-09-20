@@ -1,7 +1,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name='color-scheme' content='dark' />
+		<meta name='color-scheme' content='dark light' />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>tokencss demo</title>
 	</head>
@@ -18,12 +18,41 @@
 				display: grid;
 				gap: xs;
 				justify-content: center;
+				color: var(--text);
 			}
 			
 			p, h1, h2, h3, h4, h5, h6 {
 				max-width: 50ch;
 				line-height: 1.5;
 			}
+
+			::selection {
+				background-color: var(--accent-1);
+			}
+		</style>
+
+		<style is:global>
+			:root {
+				--bg-1: var(--color-gray-0);
+				--bg-2: var(--color-gray-1);
+				--text: var(--color-gray-9);
+				--accent-1: rgba(var(--color-grape-2-rgb), 0.8);
+				--accent-2: var(--color-grape-2);
+
+				@media (dark) {
+					--bg-1: var(--color-gray-8);
+					--bg-2: var(--color-gray-9);
+					--text: var(--color-gray-1);
+					--accent-1: rgba(var(--color-grape-6-rgb), 0.9);
+					--accent-2: var(--color-grape-7);
+				}
+			}
+		</style>
+
+		<style>
+			body {
+				background-color: var(--bg-2);
+			}	
 		</style>
 	</body>
 </html>

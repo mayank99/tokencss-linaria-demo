@@ -5,7 +5,8 @@
 		"md": { "value": "(min-width: 768px)" },
 		"lg": { "value": "(min-width: 1024px)" },
 		"xl": { "value": "(min-width: 1280px)" },
-		"2xl": { "value": "(min-width: 1536px)" }
+		"2xl": { "value": "(min-width: 1536px)" },
+		"dark": { "value": "(prefers-color-scheme: dark)" }
 	},
 	"color": {
 		"gray": {
